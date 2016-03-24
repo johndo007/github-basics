@@ -1,0 +1,35 @@
+Initial Steps of GitHub
+https://help.github.com/articles/set-up-git/
+
+Desktop application for Github on windows:
+https://desktop.github.com/
+
+Storing Credentials for GitHub On Machine:
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR EMAIL ADDRESS"
+
+Basic Flow of GitHub Use (Terminal):
+git pull                  
+git status                
+git add [/file/path]      
+git commit -m [“message”]   
+git push [flags] [remote] [repository]    
+
+Generating SSH Key For 179 Group:
+1 git clone https://github.com/kbloc001/cs179f_group.git
+2 cd cs179f_group/
+3 cd .git
+4 vim config
+5 CHANGE URL LINE TO:
+  ssh://git@github.com/kbloc001/CS179_group.git
+6 SAVE AND QUIT
+7 ssh-keygen -t rsa -b 4096 -C "git_hub_email@provider.ending"
+8 TYPE USERNAME AND HIT ENTER TWICE
+9 eval $(ssh-agent -s)
+10 ssh-add ~/.ssh/id_rsa
+11 vim ~/.ssh/id_rsa.pub
+12 COPY WHOLE FILE
+13 GO TO GITHUB
+14 GO TO SETTING IN THE TOP RIGHT 
+15 SELECT "SSH Keys" IN LEFT MENU
+16 NAME PASTE ADD
